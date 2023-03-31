@@ -1,0 +1,23 @@
+Module 1: SDLC
+
+1)what is software 
+--> It is a set of instruction, data and program that is used to  operate computers and execute specific Task.
+
+	
+2) what is sdlc
+--> It is a Structured Process the enables the production of high quality, low cost software in the shortest posible production time.
+
+
+3) what is program and programing
+--> program is set of instructions that a computer follows in order to perform a particular task.
+
+--> programming is a process of creating a set of instructions that tell a computer how to perform a task.
+
+
+4) importance of python programing
+--> it is used across many different industries - from its more common application in data science and software engineering to environments like mobile app devlopement, artificial intelligent and machine learning. 
+
+
+
+
+
