@@ -83,10 +83,34 @@ print("keys : values")
 
 for i in max_dic:
     print(i[0]," :",i[1]," ")
-"""
 
+#----------------------------------------------------------------------------------------------------------------------
 #program-15 :Given a number n, write a python program to make and print the list of Fibonacci series up to n.
 
+
+def fibo(num):
+    if num == 1:
+        return 1 
+    else:
+        a=0 
+        b=1
+        print(a)
+        print(b)
+        for i in range(num):
+            c = a+b
+            print(c)
+            a=b
+            b=c
+        
+n= int(input("enter the no : "))
+(fibo(n))
+
+#--------------------------------------------------------------------------------------------------------------------
+"""
+
+
+
+    
 
 
 
