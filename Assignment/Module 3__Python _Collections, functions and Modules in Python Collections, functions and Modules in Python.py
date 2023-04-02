@@ -339,7 +339,7 @@ def rev_tuple(t):
 t1= ('e','k','t','a')
 rev_tuple(t1)
 
-
+"""
 
 #  Write a Python program to replace last value of tuples in a list. 
 # my_list = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
