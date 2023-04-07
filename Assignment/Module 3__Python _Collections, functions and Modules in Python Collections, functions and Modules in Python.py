@@ -110,6 +110,8 @@ n= int(input("enter the no : "))
 # What is List? How will you reverse a list?
 # list is a collection of data type. which is used to store multiple data elements in to a single variable.
 # it is sperated by commas and enclose by a square brackets. it is mutable,ordered and indexable.
+# A built-in function called reverse() is used to reverse the list. 
+
 
 
 
