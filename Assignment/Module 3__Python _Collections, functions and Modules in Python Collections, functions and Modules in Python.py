@@ -341,15 +341,18 @@ def rev_tuple(t):
 t1= ('e','k','t','a')
 rev_tuple(t1)
 
-"""
+
 
 #  Write a Python program to replace last value of tuples in a list. 
-# my_list = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
-# new_list = []
-# for tuple in my_list:
-#     new_list.append(tuple[:-1] + (10,))
-# print('Original list:', my_list)
-# print('New list:', new_list)
+
+original = [(1,2,3),(2,5,7),(6,3,4)]
+new_lst = []
+for i in original:
+    new_lst.append(i[:-1]+(10,))
+print("original list: ",original)
+print("new list : ",new_lst)
+
+"""
 
 
 #  Write a Python program to find the repeated items of a tuple.
@@ -360,6 +363,7 @@ rev_tuple(t1)
 #         repeated_items.append(item)
 # print('Tuple:', my_tuple)
 # print('Repeated items:', repeated_items)
+
 
 
 #  Write a Python program to remove an empty tuple(s) from a list of tuples. 
