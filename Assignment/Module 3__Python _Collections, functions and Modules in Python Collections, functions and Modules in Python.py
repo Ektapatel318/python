@@ -352,162 +352,179 @@ for i in original:
 print("original list: ",original)
 print("new list : ",new_lst)
 
-"""
 
 
 #  Write a Python program to find the repeated items of a tuple.
-# my_tuple = (1, 2, 3, 2, 4, 5, 3, 6, 2)
-# repeated_items = []
-# for item in my_tuple:
-#     if my_tuple.count(item) > 1 and item not in repeated_items:
-#         repeated_items.append(item)
-# print('Tuple:', my_tuple)
-# print('Repeated items:', repeated_items)
-
+tup = (1,2,3,4,5,2,3,4,5,6,7,8,9,3,10,11,12,11,13)
+repeated_item = []
+for i in tup:
+    if tup.count(i)>1 and i not in repeated_item:
+        repeated_item.append(i)
+print("tuple: ",tup)
+print("Repeated item: ",repeated_item)
 
 
 #  Write a Python program to remove an empty tuple(s) from a list of tuples. 
-# my_list = [(1, 2), (), (3, 4), (), (5,6), ()]
-# new_list = [t for t in my_list if t]
-# print("Original list:", my_list)
-# print("New list:", new_list)
+my_lst = [(),(1,2),(' '),(5),(),(2,5)]
+new_lst = [i for i in my_lst if i]
+print("orinial list : ",my_lst)
+print("new list : ",new_lst)
+
+
 
 
 # Write a Python program to unzip a list of tuples into individual lists.
-# my_list = [(1, 'a'), (2, 'b'), (3, 'c')]
-# numbers, letters = zip(*my_list)
-# print("Original list:", my_list)
-# print("Numbers:", numbers)
-# print("Letters:", letters)
+my_lst = [('a',1),('b',2),('c',3)]
+letters, numbers = zip(*my_lst)
+print("original list : ",my_lst)
+print("letters : ",letters)
+print("numbers : ",numbers)
+
 
 
 # Write a Python program to convert a list of tuples into a dictionary.
-# list = [("apple", 5), ("banana", 2), ("orange", 7)]
-# dict = dict(list)
-# print("Original list:", list)
-# print("Dictionary:",dict)
+lst = [('a',1),('b',2),('c',3)]
+d = dict(lst)
+print('original list of tuple : ',lst)
+print('dictionary : ',d)
+
 
 
 #  How will you create a dictionary using tuples in python? 
 # To create a dictionary using tuples in Python, you can pass a list of tuples to the dict() constructor function. Each tuple in the list should contain exactly two elements, where the first element is the key and the second element is the value.
-# list = [("apple", 5), ("banana", 2), ("orange", 7)]
-# dict = dict(list)
-# print("Original list:", list)
-# print("Dictionary:",dict)
+lst = [('a',1),('b',2),('c',3)]
+d = dict(lst)
+print('original list of tuple : ',lst)
+print('dictionary : ',d)
+
 
 
 # Write a Python script to sort (ascending and descending) a dictionary by value. 
-# my_dict = {"apple": 5, "banana": 2, "orange": 7}
-# asc = dict(sorted(my_dict.items(), key=lambda x: x[1]))
-# desc = dict(sorted(my_dict.items(), key=lambda x: x[1], reverse=True))
-# print("Original dictionary:", my_dict)
-# print("Sorted dictionary (ascending):",asc)
-# print("Sorted dictionary (descending):",desc)
+my_dic = {'a': 7,'b':3,'c':1,'d':5}
+ascen = dict(sorted(my_dic.items(), key = lambda x: x[1]))
+desc = dict(sorted(my_dic.items(), key = lambda x: x[1], reverse=True))
+print("original dictionary : ",my_dic)
+print("-----------------------------------------------------------------")
+print("sorted dictionary (asending): ",ascen)
+print("sorted dictionary (descending): ",desc)
 
+#for i,j in ascen.items():
+#   print(f"keys {i} :  {j}")
 
+ 
 # Write a Python script to concatenate following dictionaries to create a new one.
-# dict1 = {'a': 1, 'b': 2}
-# dict2 = {'c': 3, 'd': 4}
-# dict3 = {'e': 5, 'f': 6}
-# new_dict = {}
-# new_dict.update(dict1)
-# new_dict.update(dict2)
-# new_dict.update(dict3)
-# print("New dictionary:", new_dict)
+dic1 = {'a':1, 'b':2}
+dic2 = {'c':3, 'd':5}
+dic3 = {'e':5, 'f':3}
+new_dic = {}
+new_dic.update(dic1)
+new_dic.update(dic2)
+new_dic.update(dic3)
+print("new dictionary : ",new_dic)
+
 
 
 #  Write a Python script to check if a given key already exists in a dictionary. 
-# my_dict = {"apple": 3, "banana": 2, "orange": 4}
-# if "apple" in my_dict:
-#     print("Key 'apple' already exists in the dictionary.")
-# else:
-#     print("Key 'apple' does not exist in the dictionary.")
-# if "cherry" in my_dict:
-#     print("Key 'cherry' already exists in the dictionary.")
-# else:
-#     print("Key 'cherry' does not exist in the dictionary.")
+my_dic = {'apple':30 ,'banana':50,'orange':60}
+if 'apple' in my_dic:
+    print("key 'apple' already exists in the dictionary.")
+else:
+    print("key 'apple' doest not exists in the dictionary.")
+if 'cherry' in my_dic:
+    print("key 'cherry' already exists in the dictionary.")
+else:
+    print("key 'cherry' does not exists in the dictionary.")
+
 
 
 #  How Do You Traverse Through A Dictionary Object In Python? 
 # Using a loop.
-# my_dict = {"apple": 1, "banana": 2, "cherry": 3}
-# for key in my_dict:
-#     print(key, my_dict[key])
+my_dic = {'apple':3,'banana':5,'cherry':7}
+for key in my_dic:
+    print(key, my_dic[key])
 
 
 #  How Do You Check The Presence Of A Key In A Dictionary?
 # Using in operator
-# my_dict = {"apple": 3, "banana": 2, "orange": 4}
-# if "apple" in my_dict:
-#     print("Key 'apple' already exists in the dictionary.")
-# else:
-#     print("Key 'apple' does not exist in the dictionary.")
-# if "cherry" in my_dict:
-#     print("Key 'cherry' already exists in the dictionary.")
-# else:
-#     print("Key 'cherry' does not exist in the dictionary.")
+if 'apple' in my_dic:
+    print("key 'apple' already exists in the dictionary.")
+else:
+    print("key 'apple' doest not exists in the dictionary.")
+if 'cherry' in my_dic:
+    print("key 'cherry' already exists in the dictionary.")
+else:
+    print("key 'cherry' does not exists in the dictionary.")
+
 
 
 # Write a Python script to print a dictionary where the keys are numbers between 1 and 15.
-# my_dict = {}
-# for i in range(1, 16):
-#     my_dict[i] = i*i
-# print(my_dict)
+my_dic = {}
+for i in range(1,16):
+    my_dic[i]= i*i
+#print(my_dic)
+for i,j in my_dic.items():
+    print(i,j)
+
 
 
 #  Write a Python program to check multiple keys exists in a dictionary .
 #  Using all() function along with a list comprehension to check if multiple keys exist in a dictionary.
-# def check_keys(dict_obj, keys_list):
-#     return all(key in dict_obj for key in keys_list)
-# my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
-# keys_to_check = ['name', 'city', 'country']
-# result = check_keys(my_dict, keys_to_check)
-# if result:
-#     print("All keys exist in the dictionary")
-# else:
-#     print("One or more keys not found in the dictionary")
+def check_keys(dic,key_list):
+    return all(i in dic for i in key_list)
+my_dic = {'name': 'John', 'age': 25, 'city': 'New York'}
+key_to_check = ['name','city','country']
+result = check_keys(my_dic,key_to_check)
+if result:
+    print("all keys exist in the dictionary")
+else:
+    print("one or more keys  not fount in the dictionary")
 
 
 
 # Write a Python script to merge two Python dictionaries 
 # To merge two Python dictionaries, update() method or the dictionary unpacking ** operator is used.
-# dict1 = {'a': 10, 'b': 20}
-# dict2 = {'c': 30, 'd': 40}
-# dict1.update(dict2)
-# print(dict1)
+dict1 = {'a': 10, 'b': 20}
+dict2 = {'c': 30, 'd': 40}
+#dict1.update(dict2)
+#print(dict1)
 
-# dict1 = {'a': 10, 'b': 20}
-# dict2 = {'c': 30, 'd': 40}
-# merged_dict = {**dict1, **dict2}
-# print(merged_dict)
-
+merged_dict = {**dict1,**dict2}
+print(merged_dict)
 
 
 # Write a Python program to map two lists into a dictionary 
-# keys = ['apple', 'banana', 'orange']
-# values = [3, 6, 4]
-# fruit_dict = dict(zip(keys, values))
-# print(fruit_dict)
+empid = ['e11','e12','e13','e14','e15']
+empsalary = [40000,42000,50000,55000,80000]
+emp_data = dict(zip(empid,empsalary))
+print(emp_data)
+
 
 
 # Write a Python program to combine two dictionary adding values for common keys. d1 = {'a': 100, 'b': 200, 'c':300} o d2 = {'a': 300, 'b': 200,’d’:400} Sample output: Counter ({'a': 400, 'b': 400,’d’: 400, 'c': 300}). 
 # from collections import Counter
-# d1 = {'a': 100, 'b': 200, 'c': 300}
-# d2 = {'a': 300, 'b': 200, 'd': 400}
-# result = Counter(d1) + Counter(d2)
-# print(result)
+
+from collections import Counter
+d1 = {'e1':40,'e2':50,'e3':40}
+d2 ={'e1':30,'e2':80,'e3':70}
+new_dic = Counter(d1) + Counter(d2)
+print(new_dic)
+
+
 
 
 # Write a Python program to print all unique values in a dictionary. 
-# my_dict = {"a": 1, "b": 2, "c": 3, "d": 2, "e": 4, "f": 3}
-# unique_values = set()
-# for value in my_dict.values():
-#     unique_values.add(value)
-# print("Unique values:", unique_values)
+emp_data = {'e11': 40000,'e12':40000,'e13':50000,'e14':60000,'e15':90000}
+unique_value = set()
+for i in emp_data.values():
+    unique_value.add(i)
+print(unique_value)
+
+"""
 
 
 # Why Do You Use the Zip () Method in Python?
-# We use zip() method to simplify the code when we need to iterate over two or more lists at the same time. Instead of using a for loop to iterate over each list separately, we can use zip() to iterate over both lists simultaneously.The zip() method can also be used to create a dictionary from two lists, where one list contains keys and the other list contains values.
+# We use zip() method to simplify the code when we need to iterate over two or more lists at the same time. Instead of using a for loop to iterate over each list separately, we can use zip() to iterate over both lists simultaneously.
+# The zip() method can also be used to create a dictionary from two lists, where one list contains keys and the other list contains values.
 
 
 # Write a Python program to create and display all combinations of letters, selecting each letter from a different key in a dictionary. Sample data: {'1': ['a','b'], '2': ['c','d']} Expected Output: ac ad bc bd
