@@ -519,7 +519,7 @@ for i in emp_data.values():
     unique_value.add(i)
 print(unique_value)
 
-"""
+
 
 
 # Why Do You Use the Zip () Method in Python?
@@ -527,12 +527,14 @@ print(unique_value)
 # The zip() method can also be used to create a dictionary from two lists, where one list contains keys and the other list contains values.
 
 
-# Write a Python program to create and display all combinations of letters, selecting each letter from a different key in a dictionary. Sample data: {'1': ['a','b'], '2': ['c','d']} Expected Output: ac ad bc bd
-# import itertools
-# data = {'1': ['a', 'b'], '2': ['c', 'd']}
-# combinations = list(itertools.product(*[data[key] for key in data]))
-# for combination in combinations:
-#     print(''.join(combination), end=' ')
+# Write a Python program to create and display all combinations of letters, selecting each letter from a different key in a dictionary.
+# Sample data: {'1': ['a','b'], '2': ['c','d']} Expected Output: ac ad bc bd
+import itertools
+data = {1:['a','b'], 2:['c','d']}
+combination = list(itertools.product(*[data[key] for key in data]))
+for i in combination:
+    print(''.join(i),end = " ")
+
 
 
 #  Write a Python program to find the highest 3 values in a dictionary.
@@ -542,13 +544,29 @@ print(unique_value)
 # print("The highest 3 values in the dictionary are:", highest_values)
 
 
-# Write a Python program to combine values in python list of dictionaries. Sample data: [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, o {'item': 'item1', 'amount': 750}] Expected Output:Counter ({'item1': 1150, 'item2': 300}
+dic = {'a':6, 'b':8, 'c':2, 'd':5,'e':11, 'f':1, 'g':7, 'h':3}
+sort_dic = sorted(dic.items(), key = lambda x: x[1], reverse=True)
+highest_value = [value for key, value in sort_dic[:3]]
+print("The highest 3 value in the dictionary are : ", highest_value)
+
+
+"""   
+
+
+### Write a Python program to combine values in python list of dictionaries. Sample data: [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, o {'item': 'item1', 'amount': 750}] Expected Output:Counter ({'item1': 1150, 'item2': 300}
 # from collections import Counter
 # data = [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, {'item': 'item1', 'amount': 750}]
 # result = Counter()
 # for d in data:
 #     result[d['item']] += d['amount']
 # print(result)
+
+from collections import Counter
+data = [{'item': 'item1','amount': 20}, {'item': 'item2','amount':50}, {'item': 'item3','amount': 80}]
+result = Counter()
+for i in data:
+    result[i['item']] += i['amount']
+print(result)
 
 
 # Write a Python program to create a dictionary from a string. Note: Track the count of the letters from the string. Sample string: 'w3resource' Expected output: {'3': 1,’s’: 1, 'r': 2, 'u': 1, 'w': 1, 'c': 1, 'e': 2, 'o': 1} 
