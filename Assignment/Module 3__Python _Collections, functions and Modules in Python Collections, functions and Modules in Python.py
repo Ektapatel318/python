@@ -548,19 +548,10 @@ dic = {'a':6, 'b':8, 'c':2, 'd':5,'e':11, 'f':1, 'g':7, 'h':3}
 sort_dic = sorted(dic.items(), key = lambda x: x[1], reverse=True)
 highest_value = [value for key, value in sort_dic[:3]]
 print("The highest 3 value in the dictionary are : ", highest_value)
-
-
-"""   
+  
 
 
 ### Write a Python program to combine values in python list of dictionaries. Sample data: [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, o {'item': 'item1', 'amount': 750}] Expected Output:Counter ({'item1': 1150, 'item2': 300}
-# from collections import Counter
-# data = [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, {'item': 'item1', 'amount': 750}]
-# result = Counter()
-# for d in data:
-#     result[d['item']] += d['amount']
-# print(result)
-
 from collections import Counter
 data = [{'item': 'item1','amount': 20}, {'item': 'item2','amount':50}, {'item': 'item3','amount': 80}]
 result = Counter()
@@ -569,60 +560,69 @@ for i in data:
 print(result)
 
 
+
+
 # Write a Python program to create a dictionary from a string. Note: Track the count of the letters from the string. Sample string: 'w3resource' Expected output: {'3': 1,’s’: 1, 'r': 2, 'u': 1, 'w': 1, 'c': 1, 'e': 2, 'o': 1} 
-# string = "w3resource"
-# char_count = {}
-# for char in string:
-#     if char in char_count:
-#         char_count[char] += 1
-#     else:
-#         char_count[char] = 1
-# print(char_count)
+s = "w3school"
+dic_count = {}
+for i in s:
+    if i in dic_count:
+        dic_count[i] += 1
+    else:
+        dic_count[i] = 1
+print(dic_count)
+
 
 
 # Write a Python function to calculate the factorial of a number (a nonnegative integer) 
-# def factorial(n): 
-#     p=1 
-#     i=1 
-#     while i<=n: 
-#        p= p*i 
-#        i+=1 
-#     return p 
+
+def fact(n):
+    p = 1
+    i=1
+    while i<=n:
+        p=p*i
+        i += 1
+    return p
+print(fact(5))
+
+
 
 
 # Write a Python function to check whether a number is in a given range.
 # function
 # def check_range(number, range_tuple):
     # return range_tuple[0] <= number <= range_tuple[1]
+def test_range(n):
+    if n in range(10,20):
+        print( "Number %s is in the range"%str(n))
+    else :
+        print("The number is outside the given range.")
+test_range(15)
 
-# def test_range(n):
-#     if n in range(10,20):
-#         print( "Number %s is in the range"%str(n))
-#     else :
-#         print("The number is outside the given range.")
-# test_range(15)
+
 
 
 # Write a Python function to check whether a number is perfect or not. 
-# def is_perfect(num):
-#     sum_of_divisors = 0
-#     for i in range(1, num):
-#         if num % i == 0:
-#             sum_of_divisors += i
-#     if sum_of_divisors == num:
-#         return True
-#     else:
-#         return False
+def is_perfect(num):
+     sum_of_divisors = 0
+     for i in range(1, num):
+         if num % i == 0:
+             sum_of_divisors += i
+     if sum_of_divisors == num:
+         return True
+     else:
+         return False
+
 
 
 # Write a Python function that checks whether a passed string is palindrome or not 
-# def is_palindrome(s):
-#     s = s.replace(" ", "").lower()
-#     reversed_s = s[::-1]
-#     if s == reversed_s:
-#         return True
-#     else:
-#         return False
+def is_pallindrom(str):
+    if str[:]==str[-1::-1]:
+        return True
+    else:
+        return False
+print("is string pallindrom :",is_pallindrom("madam "))
+
 
 
 # How Many Basic Types Of Functions Are Available In Python? 
@@ -666,12 +666,14 @@ print(result)
 
 
 # Write a Python program to read a random line from a file. 
-# import random
-# filename = "example.txt"
-# with open(filename, "r") as file:
-#     lines = file.readlines()
-#     random_line = random.choice(lines)
-#     print(random_line)
+import random
+filename = "example.txt"
+with open(filename, "r") as file:
+     lines = file.readlines()
+     random_line = random.choice(lines)
+     print(random_line)
+
+
 
 
 # Write a Python program to convert degree to radian 
@@ -712,20 +714,24 @@ print(result)
 
 
 # Write a Python program to returns sum of all divisors of a number. 
-# def sum_divisors(num):
-#     divisors = []
-#     for i in range(1, num+1):
-#         if num % i == 0:
-#             divisors.append(i)
-#     return sum(divisors)
+def sum_divisors(num):
+    divisors = []
+    for i in range(1, num+1):
+         if num % i == 0:
+             divisors.append(i)
+    return sum(divisors)
+
 
 
 # Write a Python program to find the maximum and minimum numbers from the specified decimal numbers. 
-# decimal_numbers = [3.14, 2.718, 1.618, 0.999, 4.669]
-# max_number = max(decimal_numbers)
-# min_number = min(decimal_numbers)
-# print("The maximum number is:", max_number)
-# print("The minimum number is:", min_number)
+decimal_numbers = [3.14, 2.718, 1.618, 0.999, 4.669]
+max_number = max(decimal_numbers)
+min_number = min(decimal_numbers)
+print("The maximum number is:", max_number)
+print("The minimum number is:", min_number)
+
+""" 
+
 
 
 
