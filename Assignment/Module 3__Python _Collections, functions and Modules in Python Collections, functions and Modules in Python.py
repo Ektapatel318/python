@@ -732,6 +732,44 @@ print("The minimum number is:", min_number)
 
 """ 
 
+# Mini project : 
+
+# Problem Statement : Password Generator 
+# Make a program to generate a strong password using the input given by the user. To generate a password, 
+# randomly take some words from the user input and then include numbers, special characters and capital 
+# letters to generate the password. Also, keep a check that password length is more than 8 characters. 
+# Note: Include Exception handling wherever required. Also, make a ‘User’ class and store the details like user 
+# id, name and password of each user as a tuple.
+import exception handling 
+import string
+import random
+s = []
+s1 = string.ascii_letters
+s2 = string.ascii_lowercase
+s3 = string.ascii_uppercase
+s4 = string.punctuation
+try:
+    len = int(input("enter password length\n"))
+
+s.extend(s1)
+s.extend(s2)
+s.extend(s3)
+s.extend(s4)
+
+
+print("".join(random.sample(s,len)))
+
+except:
+    print("enter the valid input ")
+
+
+
+
+
+
+
+
+ 
 
 
 
